@@ -1,9 +1,10 @@
 services:
 - type: pserv
   name: mysql
-  plan: standard
+  plan: starter-plus
   env: docker
-  autoDeploy: false
+  region: frankfurt
+  autoDeploy: true
   disk:
     name: mysql
     mountPath: /var/lib/mysql
@@ -15,14 +16,10 @@ envVarGroups:
 - name: mysql
   envVars:
   - key: MYSQL_DATABASE
-    value: mysql
+    value: mydatabase
   - key: MYSQL_USER
-    value: mysql
+    value: myuser
   - key: MYSQL_PASSWORD
     generateValue: true
   - key: MYSQL_ROOT_PASSWORD
     generateValue: true
-
-databases:
-  - name: SQLDatabase
-    region: frankfurt
