@@ -25,5 +25,4 @@ envVarGroups:
 
 databases:
   - name: SQLDatabase
-    plan: free
     region: frankfurt
