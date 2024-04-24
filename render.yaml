@@ -24,6 +24,6 @@ envVarGroups:
     generateValue: true
 
 databases:
-  - name: cal-postgres
+  - name: SQLDatabase
     plan: free
     region: frankfurt
